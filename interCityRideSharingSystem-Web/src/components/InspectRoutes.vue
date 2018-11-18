@@ -32,7 +32,7 @@
       </tr>
     </table>
     <p>
-      <span style="color:red">Message will be displayed here if errors occured when getting routes</span>
+      <span style="color:red">Error : Message will be displayed here if errors occured when getting routes</span>
     </p>
   </div>
 </template>
