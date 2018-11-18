@@ -1,6 +1,6 @@
 <template>
   <div id="InspectPassenger">
-    <h2>Fleet Status View</h2>
+    <h2>Fleet Status View -- Passenger</h2>
     <table align="center">
        <tr>
           <td>John</td>
