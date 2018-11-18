@@ -1,6 +1,13 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <h2>Support Services</h2>
+    <ul>
+     <li><a href="#/status"><button>Fleet Status Overview</button></a></li>
+      <br>
+      <br>
+      <li><a href="#/ranking"><button>Rankings Overview</button></a></li>
+       </ul>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -25,7 +32,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Intercity Ride Sharing System web application '
     }
   }
 }
