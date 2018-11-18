@@ -2,25 +2,21 @@
   <div id="InspectPassenger">
     <h2>Fleet Status View</h2>
     <table align="center">
-      <tr>
-          <td>Active Drivers</td>
+       <tr>
+          <td>John</td>
           <td>Active Passengers</td>
-          <td>Active Routes</td>
       </tr>
       <tr>
           <td>
-              <a href="#/"><button>Inspect Drivers</button></a>
-          </td>
-          <td>
-              <button>Inspect Passengers</button>
+              <input type="text" placeholder="Passenger Name">
           </td>
            <td>
-              <button>Inspect Routes</button>
-          </td>
+              <button>Show Passengers</button>
+          </td>	
       </tr>
     </table>
     <p>
-      <span style="color:red">Error: this is inspect passenger</span>
+      <span style="color:red">Message will be displayed here if errors occured when getting passengers</span>
     </p>
   </div>
 </template>
