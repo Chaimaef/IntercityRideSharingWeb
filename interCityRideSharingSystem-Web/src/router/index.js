@@ -5,18 +5,23 @@ import InspectUser from '@/components/InspectUser'
 import InspectDriver from '@/components/InspectDriver'
 import InspectPassenger from '@/components/InspectPassenger'
 import InspectRoutes from '@/components/InspectRoutes'
+import Driver from '@/components/Driver'
+import EventRegistration from '@/components/EventRegistration'
+import Home from '@/components/Home'
+
+
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/app',
       name: 'Hello',
-      component: Hello
+      component: Home
     },
     {
-      path: '/app',
+      path: '/status',
       name: 'InspectUser',
       component: InspectUser
     }, 
@@ -34,6 +39,18 @@ export default new Router({
       path: '/route',
       name: 'InspectRoutes',
       component: InspectRoutes
+    },
+    {
+      path: '/driver',
+      name: 'Driver',
+      component: Driver
+    },
+	   {
+      path: '/ranking',
+      name: 'Ranking',
+      component: EventRegistration
     }
+
+
   ]
 })
