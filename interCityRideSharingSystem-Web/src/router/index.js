@@ -8,7 +8,9 @@ import InspectRoutes from '@/components/InspectRoutes'
 import Driver from '@/components/Driver'
 import EventRegistration from '@/components/EventRegistration'
 import Home from '@/components/Home'
-
+import DriverRanking from '@/components/DriverRanking'
+import PassengerRanking from '@/components/PassengerRanking'
+import RouteRanking from '@/components/RouteRanking'
 
 
 Vue.use(Router)
@@ -49,7 +51,22 @@ export default new Router({
       path: '/ranking',
       name: 'Ranking',
       component: EventRegistration
-    }
+    },
+	  	   {
+      path: '/passengerRanking',
+      name: 'Ranking',
+      component: PassengerRanking
+    },
+	  	   {
+      path: '/driverRanking',
+      name: 'Ranking',
+      component: DriverRanking
+    },
+	  	   {
+      path: '/routeRanking',
+      name: 'Ranking',
+      component: RouteRanking
+    },
 
 
   ]
