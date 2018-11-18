@@ -4,9 +4,9 @@
     <table align="center">
        <tr>
           <td>
-              <button>Driver</button>
-      	      <button>Passenger</button>
- 	      <button>Route</button>
+          <a href="#/passengerRanking"><button>Passenger Ranking</button></a>
+      	    <a href="#/driverRanking"><button>Driver Ranking</button></a>
+ 	      <a href="#/routeRanking"><button>RouteRanking</button></a>
           </td>
       </tr>
     </table>
