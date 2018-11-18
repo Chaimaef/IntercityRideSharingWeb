@@ -1,26 +1,22 @@
 <template>
   <div id="InspectDriver">
-    <h2>Fleet Status View</h2>
+    <h2>Fleet Status View--Driver</h2>
     <table align="center">
       <tr>
+          <td>John</td>
           <td>Active Drivers</td>
-          <td>Active Passengers</td>
-          <td>Active Routes</td>
       </tr>
       <tr>
           <td>
-              <a href="#/"><button>Inspect Drivers</button></a>
-          </td>
-          <td>
-              <button>Inspect Passengers</button>
+              <input type="text" placeholder="Driver Name">
           </td>
            <td>
-              <button>Inspect Routes</button>
+              <button>Show Drivers</button>
           </td>
       </tr>
     </table>
     <p>
-      <span style="color:red">Error: this is inspect driver</span>
+      <span style="color:red">Error: Message will be displayed here if errors occured when getting drivers</span>
     </p>
   </div>
 </template>
