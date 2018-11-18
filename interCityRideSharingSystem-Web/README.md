@@ -1,6 +1,6 @@
 # intercityridesharingsystem-web
 
-> A Vue.js web frontend for Intercity Ride Sharing App
+> A Vue.js web frontend for Intercity Ride Sharing System Ap
 
 ## Build Setup
 
