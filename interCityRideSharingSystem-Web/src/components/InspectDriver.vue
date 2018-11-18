@@ -1,6 +1,6 @@
 <template>
   <div id="InspectDriver">
-    <h2>Fleet Status View--Driver</h2>
+    <h2>Fleet Status View -- Driver</h2>
     <table align="center">
       <tr>
           <td>John</td>
