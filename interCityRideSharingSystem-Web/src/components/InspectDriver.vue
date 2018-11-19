@@ -13,6 +13,9 @@
            <td>
               <button @click="createParticipant(newParticipant)">Show Drivers</button>
           </td>	
+           <td>
+              <button>Clear</button>
+          </td>	
       </tr>
     </table>
     <p>
@@ -20,8 +23,7 @@
     </p>
     <table>
   <tr v-for="participant in participants" >
-      <td>{{ participant}}</td>
-      
+      <td>{{ participant}}</td>  
   </tr>
 <!-- Input field and button should be kept here -->
 </table>
