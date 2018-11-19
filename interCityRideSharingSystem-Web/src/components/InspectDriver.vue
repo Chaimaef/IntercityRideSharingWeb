@@ -8,20 +8,27 @@
       </tr>
       <tr>
           <td>
-              <input type="text" placeholder="Driver Name">
+              <input type="text" v-model="newParticipant" placeholder="Driver Name">
           </td>
            <td>
-              <button>Show Drivers</button>
+              <button @click="createParticipant(newParticipant)">Show Drivers</button>
           </td>	
       </tr>
     </table>
     <p>
       <span style="color:red">Error: Message will be displayed here if errors occured when getting drivers</span>
     </p>
+    <table>
+  <tr v-for="participant in participants" >
+      <td>{{ participant}}</td>
+      
+  </tr>
+<!-- Input field and button should be kept here -->
+</table>
   </div>
 </template>
 
-<script>
+<script src="./getuser.js">
 </script>
 
 <style>
