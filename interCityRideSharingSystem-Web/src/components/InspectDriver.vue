@@ -21,10 +21,17 @@
     <p>
       <span style="color:red">Error: Message will be displayed here if errors occured when getting drivers</span>
     </p>
-    <table>
-  <tr v-for="participant in participants" >
-      <td>{{ participant}}</td>  
-  </tr>
+    <table >
+      <thead>
+        <tr>
+          <td>John</td>
+          <td>Active Drivers</td>
+        </tr>
+      </thead>
+        <tr v-for="participant in participants">
+          <td>{{ participant}}</td> 
+        </tr>
+
 <!-- Input field and button should be kept here -->
 </table>
   </div>
