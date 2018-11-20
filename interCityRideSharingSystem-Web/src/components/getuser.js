@@ -34,7 +34,7 @@ var AXIOS = axios.create({
     }, 
     created: function () {
         // Initializing participants from backend
-          AXIOS.get(`/userg`)
+          AXIOS.get(`/driverg`)
           .then(response => {
             // JSON responses are automatically parsed.
             this.participants = response.data
@@ -45,7 +45,21 @@ var AXIOS = axios.create({
       }, 
       methods: {
         createParticipant: function (participantName) {
-            AXIOS.post(`/userg/`+participantName, {}, {})
+            AXIOS.post(`/driverg/`+participantName, {}, {})
+            .then(response => {
+              // JSON responses are automatically parsed.
+              this.participants.push(response.data)
+              this.newParticipant = ''
+              this.errorParticipant = ''
+            })
+            .catch(e => {
+              var errorMsg = e.message
+              console.log(errorMsg)
+              this.errorParticipant = errorMsg
+            });
+          }, 
+          getParticipant: function () {
+            AXIOS.post(`/driverg/`, {}, {})
             .then(response => {
               // JSON responses are automatically parsed.
               this.participants.push(response.data)
@@ -58,5 +72,6 @@ var AXIOS = axios.create({
               this.errorParticipant = errorMsg
             });
           }
+
       }
   }

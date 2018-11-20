@@ -4,7 +4,8 @@
     <table align="center">
       <tr>
           <td>John</td>
-          <td>Active Drivers</td>
+          <td>All Active Drivers</td>
+          <td>Active Drivers With Name</td>
       </tr>
       <tr>
           <td>
@@ -14,7 +15,7 @@
               <button @click="createParticipant(newParticipant)">Show Drivers</button>
           </td>	
            <td>
-              <button>Clear</button>
+              <button @click="getParticipant">Show Drivers with Name</button>
           </td>	
       </tr>
     </table>
