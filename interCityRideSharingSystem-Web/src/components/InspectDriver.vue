@@ -21,16 +21,20 @@
     <p>
       <span style="color:red">Error: Message will be displayed here if errors occured when getting drivers</span>
     </p>
-    <table >
-      <thead>
+
+    <table align="center">
+
+      <thread>
         <tr>
-          <td>John</td>
-          <td>Active Drivers</td>
+          <td>ID</td>
+          <td>NAME</td>
         </tr>
-      </thead>
-        <tr v-for="participant in participants">
-          <td>{{ participant}}</td> 
-        </tr>
+      </thread>
+        <tbody>
+          <tr v-for="participant in participants">
+            <template v-for="line in participant.split(']')">{{line}}<br></template> 
+          </tr>
+        </tbody>
 
 <!-- Input field and button should be kept here -->
 </table>

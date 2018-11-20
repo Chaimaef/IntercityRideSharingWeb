@@ -1,6 +1,6 @@
 <template>
   <div id="eventregistration">
-    <h2>Rankings</h2>
+    <h2>Rankings View</h2>
     <table align="center">
        <tr>
           <td>

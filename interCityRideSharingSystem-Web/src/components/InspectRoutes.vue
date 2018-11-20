@@ -5,6 +5,7 @@
       <tr>
           <td>Name of the stop</td>
           <td>Start Time</td>
+          <td>Date</td>
           <td>Type of Vechicle</td>
           <td>Number of Seats Available</td>
           <td>Name of the Driver</td>
@@ -16,6 +17,9 @@
           </td>
           <td>
               <input type="text" placeholder="Start Time">
+          </td>
+           <td>
+              <input type="text" placeholder="YYYY-MM-DD">
           </td>
           <td>
               <input type="text" placeholder="Vehicle type">
@@ -29,6 +33,7 @@
            <td>
               <button>Show Routes</button>
           </td>
+         
       </tr>
     </table>
     <p>
