@@ -17,17 +17,23 @@
 
            
            <td>
-              <button>Show Drivers</button>
+             <button @click="rankDrivers(newParticipant)">Rank the drivers </button>
           </td>
        </tr>
     </table>
+    <table align="center">
+  <tr>
+      <td>{{participants}}</td>  
+  </tr>
+   </table>
+
     <p>
-      <span style="color:red">Error</span>
+      <span style="color:red"></span>
     </p>
   </div>
 </template>
 
-<script>
+<script src="./firstRanking.js">
 </script>
 
 <style>

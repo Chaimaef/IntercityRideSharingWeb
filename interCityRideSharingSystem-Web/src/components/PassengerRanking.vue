@@ -15,19 +15,28 @@
           </td>
            
            <td>
-              <button>Show Passengers</button>
+            <button @click="rankPassengers(newParticipant)">Rank the passengers</button>
+
           </td>
          
       </tr>
     </table>
+    <table align="center">
+  <tr>
+      <td>{{participants}}</td>  
+  </tr>
+   </table>
+
+
     <p>
-      <span style="color:red">Error</span>
+      <span style="color:red"></span>
     </p>
   </div>
 </template>
 
-<script>
+<script src="./secondRanking.js">
 </script>
+
 
 <style>
 #InspectRoutes{
