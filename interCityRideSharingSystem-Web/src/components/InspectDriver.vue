@@ -4,24 +4,45 @@
     <table align="center">
       <tr>
           <td>John</td>
-          <td>Active Drivers</td>
+          <td>All Active Drivers</td>
+          <td>Active Drivers With Name</td>
       </tr>
       <tr>
           <td>
-              <input type="text" placeholder="Driver Name">
+              <input type="text" v-model="newParticipant" placeholder="Driver Name">
           </td>
            <td>
-              <button>Show Drivers</button>
+              <button @click="getParticipant">Show Drivers</button>
+          </td>	
+           <td>
+              <button @click="createParticipant(newParticipant)">Show Drivers with Name</button>
           </td>	
       </tr>
     </table>
     <p>
       <span style="color:red">Error: Message will be displayed here if errors occured when getting drivers</span>
     </p>
+
+    <table align="center">
+
+      <thread>
+        <tr>
+          <td>ID</td>
+          <td>NAME</td>
+        </tr>
+      </thread>
+        <tbody>
+          <tr v-for="participant in participants">
+            <template v-for="line in participant.split(']')">{{line}}<br></template> 
+          </tr>
+        </tbody>
+
+<!-- Input field and button should be kept here -->
+</table>
   </div>
 </template>
 
-<script>
+<script src="./getuser.js">
 </script>
 
 <style>
