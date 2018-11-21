@@ -4,34 +4,18 @@
     <table align="center">
       <tr>
           <td>Name of the stop</td>
-          <td>Start Time</td>
-          <td>Date</td>
-          <td>Type of Vechicle</td>
-          <td>Number of Seats Available</td>
-          <td>Name of the Driver</td>
-          <td>Active Routes</td>
+          <td>Show All Active Routes</td>
+          <td>Show Active Routes with Stop</td>
       </tr>
       <tr>
           <td>
-              <input type="text" placeholder="Stop">
+              <input type="text" v-model="newParticipant" placeholder="Stop Name">
+          </td>
+           <td>
+              <button @click="getParticipant">Show All Routes</button>
           </td>
           <td>
-              <input type="text" placeholder="Start Time">
-          </td>
-           <td>
-              <input type="text" placeholder="YYYY-MM-DD">
-          </td>
-          <td>
-              <input type="text" placeholder="Vehicle type">
-          </td>
-           <td>
-              <input type="text" placeholder="Available Seating">
-          </td>
-           <td>
-              <input type="text" placeholder="Driver Name">
-          </td>
-           <td>
-              <button>Show Routes</button>
+              <button @click="createParticipant(newParticipant)">Show Routes With Stop</button>
           </td>
          
       </tr>
@@ -39,12 +23,27 @@
     <p>
       <span style="color:red">Error : Message will be displayed here if errors occured when getting routes</span>
     </p>
+        <table align="center">
+
+      <thread>
+        <tr>
+          <td>ID</td>
+          <td>NAME</td>
+        </tr>
+      </thread>
+        <tbody>
+          <tr v-for="participant in participants">
+            <template v-for="line in participant.split(']')">{{line}}<br></template> 
+          </tr>
+        </tbody>
+
+<!-- Input field and button should be kept here -->
+</table>
   </div>
 </template>
 
-<script>
+<script src="./getjourney.js">
 </script>
-
 <style>
 #InspectRoutes{
     font-family: 'Avenir', Helvetica, Arial, sans-serif;

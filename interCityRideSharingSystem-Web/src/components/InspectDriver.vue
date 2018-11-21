@@ -22,7 +22,6 @@
     <p>
       <span style="color:red">Error: Message will be displayed here if errors occured when getting drivers</span>
     </p>
-
     <table align="center">
 
       <thread>
