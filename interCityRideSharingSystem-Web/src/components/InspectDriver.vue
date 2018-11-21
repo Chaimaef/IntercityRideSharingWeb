@@ -12,10 +12,10 @@
               <input type="text" v-model="newParticipant" placeholder="Driver Name">
           </td>
            <td>
-              <button @click="createParticipant(newParticipant)">Show Drivers</button>
+              <button @click="getParticipant">Show Drivers</button>
           </td>	
            <td>
-              <button @click="getParticipant">Show Drivers with Name</button>
+              <button @click="createParticipant(newParticipant)">Show Drivers with Name</button>
           </td>	
       </tr>
     </table>
