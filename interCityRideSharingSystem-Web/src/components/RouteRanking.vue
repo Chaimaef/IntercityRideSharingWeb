@@ -15,18 +15,26 @@
           </td>
            
            <td>
-              <button>Show Journeys</button>
+              <button @click="rankDrivers(newParticipant)">Rank the stops </button>
+
           </td>
          
       </tr>
     </table>
+    </table>
+    <table align="center">
+  <tr>
+      <td>{{participants}}</td>  
+  </tr>
+   </table>
+
     <p>
-      <span style="color:red">Error</span>
+      <span style="color:red"></span>
     </p>
   </div>
 </template>
 
-<script>
+<script src="./thirdRanking.js">
 </script>
 
 <style>

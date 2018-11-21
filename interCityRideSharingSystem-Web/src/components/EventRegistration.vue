@@ -11,7 +11,7 @@
       </tr>
     </table>
     <p>
-      <span style="color:red">Error</span>
+      <span style="color:red"></span>
     </p>
   </div>
  </template>
