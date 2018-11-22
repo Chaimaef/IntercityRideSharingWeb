@@ -45,7 +45,12 @@ var AXIOS = axios.create({
       }, 
       methods: {
         createParticipant: function (participantName) {
-            AXIOS.post(`/driverg/`+participantName, {}, {})
+          if (participantName.indexOf(' ') >= 0){
+            var error = document.getElementById("error");
+            error.innerHTML ="Cannot process the request because a whitespace exists"; 
+            //console.log("Cannot process the request because a whitespace exists")
+          }
+          else{  AXIOS.post(`/driverg/`+participantName, {}, {})
             .then(response => {
               // JSON responses are automatically parsed.
               this.participants.push(response.data)
@@ -56,7 +61,7 @@ var AXIOS = axios.create({
               var errorMsg = e.message
               console.log(errorMsg)
               this.errorParticipant = errorMsg
-            });
+            });}
           }, 
           getParticipant: function () {
             AXIOS.post(`/driverg/`, {}, {})

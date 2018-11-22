@@ -13,8 +13,6 @@
           <td>
               <input type="text" placeholder="dd-MMM-yyyy-HH:mm:ss">
           </td>
-      
-
            
            <td>
               <button>Show Drivers</button>

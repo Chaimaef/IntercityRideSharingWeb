@@ -21,14 +21,12 @@
       </tr>
     </table>
     <p>
-      <span style="color:red">Error : Message will be displayed here if errors occured when getting routes</span>
+      <span id="error" style="color:red">Error Message will be displayed here if errors occured when getting routes</span>
     </p>
         <table align="center">
 
       <thread>
         <tr>
-          <td>ID</td>
-          <td>NAME</td>
         </tr>
       </thread>
         <tbody>
