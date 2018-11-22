@@ -1,5 +1,5 @@
 <template>
-  <div id="">
+  <div id="DriverRankingi">
     <h2>Ranking View -- Top Performing Drivers</h2>
     <table align="center">
       <tr>
@@ -8,28 +8,26 @@
       </tr>
       <tr>
           <td>
-              <input type="text" placeholder="YYYY-MM-DD">
+              <input type="text" v-model="startDate" placeholder="YYYY-MM-DD">
           </td>
           <td>
-              <input type="text" placeholder="YYYY-MM-DD">
-          </td>
-      
-
-           
+              <input type="text" v-model="endDate" placeholder="YYYY-MM-DD">
+          </td> 
            <td>
-             <button @click="rankDrivers(newParticipant)">Rank the drivers </button>
+             <button @click="rankDriver(startDate,endDate)">Rank the drivers </button>
           </td>
        </tr>
-    </table>
+     </table>
+ 
+  <p>
+      <span style="color:red"></span>
+    </p>
+
     <table align="center">
   <tr>
       <td>{{participants}}</td>  
   </tr>
-   </table>
-
-    <p>
-      <span style="color:red"></span>
-    </p>
+   </table> 
   </div>
 </template>
 

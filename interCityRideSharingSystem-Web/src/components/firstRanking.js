@@ -4,6 +4,7 @@ var config = require('../../config')
 var frontendUrl = 'http://' + config.dev.host + ':' + config.dev.port
 var backendUrl = 'http://' + config.dev.backendHost + ':' + config.dev.backendPort
 
+
 var AXIOS = axios.create({
   baseURL: backendUrl,
   headers: { 'Access-Control-Allow-Origin': frontendUrl }
@@ -21,7 +22,7 @@ var AXIOS = axios.create({
     }, 
     created: function () {
         // Initializing participants from backend
-          AXIOS.get(`/rankDrivers`)
+          AXIOS.get(`/rankDriversDate/startDate/endDate`)
           .then(response => {
             // JSON responses are automatically parsed.
             this.participants = response.data
@@ -32,7 +33,7 @@ var AXIOS = axios.create({
       }, 
       methods: {
         rankDrivers: function () {
-            AXIOS.post(`/rankDrivers`, {}, {})
+            AXIOS.post(`/rankDriversDate/startDate/endDate`, {}, {})
             .then(response => {
               // JSON responses are automatically parsed.
               this.participants.push(response.data)
