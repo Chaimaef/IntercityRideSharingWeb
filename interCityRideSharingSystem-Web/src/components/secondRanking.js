@@ -21,7 +21,7 @@ var AXIOS = axios.create({
     }, 
     created: function () {
         // Initializing participants from backend
-          AXIOS.get(`/rankPassengers`)
+          AXIOS.get(`/rankPassengersDate`)
           .then(response => {
             // JSON responses are automatically parsed.
             this.participants = response.data
@@ -31,8 +31,8 @@ var AXIOS = axios.create({
           });
       }, 
       methods: {
-        rankPassengers: function () {
-            AXIOS.post(`/rankPassengers`, {}, {})
+        rankPassengersDate: function (startDate, endDate) {
+            AXIOS.post(`/rankPassengersDate/`+startDate+`/`+endDate, {}, {})
             .then(response => {
               // JSON responses are automatically parsed.
               this.participants.push(response.data)

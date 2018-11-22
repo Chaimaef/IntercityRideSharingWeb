@@ -8,24 +8,36 @@
       </tr>
       <tr>
           <td>
-              <input type="text" placeholder="dd-MMM-yyyy-HH:mm:ss">
+              <input type="text" v-model="startDate" placeholder="dd-MMM-yyyy-HH:mm:ss">
           </td>
           <td>
-              <input type="text" placeholder="dd-MMM-yyyy-HH:mm:ss">
+              <input type="text" v-model="endDate" placeholder="dd-MMM-yyyy-HH:mm:ss">
           </td>
            
            <td>
-            <button @click="rankPassengers(newParticipant)">Rank the passengers</button>
+            <button @click="rankPassengersDate(startDate, endDate)">Rank the passengers</button>
 
           </td>
          
       </tr>
-    </table>
-    <table align="center">
-  <tr>
-      <td>{{participants}}</td>  
-  </tr>
-   </table>
+</table>
+
+ 
+      <table align="center">
+
+      <thread>
+        <tr>
+        </tr>
+      </thread>
+        <tbody>
+          <tr v-for="participant in participants">
+            <template v-for="line in participant.split('_')">{{line}}<br></template> 
+          </tr>
+        </tbody>
+
+<!-- Input field and button should be kept here -->
+</table>
+
 
 
     <p>

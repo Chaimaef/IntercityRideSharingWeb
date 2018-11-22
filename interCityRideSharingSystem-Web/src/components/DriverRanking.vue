@@ -1,5 +1,5 @@
 <template>
-  <div id="DriverRankingi">
+  <div id="DriverRanking">
     <h2>Ranking View -- Top Performing Drivers</h2>
     <table align="center">
       <tr>
@@ -8,13 +8,13 @@
       </tr>
       <tr>
           <td>
-              <input type="text" v-model="startDate" placeholder="YYYY-MM-DD">
+              <input type="text" v-model="startDate" placeholder="dd-MMM-yyyy-HH:mm:ss">
           </td>
           <td>
-              <input type="text" v-model="endDate" placeholder="YYYY-MM-DD">
+              <input type="text" v-model="endDate" placeholder="dd-MMM-yyyy-HH:mm:ss">
           </td> 
            <td>
-             <button @click="rankDriver(startDate,endDate)">Rank the drivers </button>
+             <button @click="rankDriversDate(startDate,endDate)">Rank the drivers </button>
           </td>
        </tr>
      </table>
@@ -23,13 +23,22 @@
       <span style="color:red"></span>
     </p>
 
-    <table align="center">
-  <tr>
-      <td>{{participants}}</td>  
-  </tr>
-   </table> 
+      <table align="center">
+
+      <thread>
+        <tr>
+        </tr>
+      </thread>
+        <tbody>
+          <tr v-for="participant in participants">
+            <template v-for="line in participant.split('_')">{{line}}<br></template> 
+          </tr>
+        </tbody>
+
+<!-- Input field and button should be kept here -->
+</table>
   </div>
-</template>
+</template>i
 
 <script src="./firstRanking.js">
 </script>
