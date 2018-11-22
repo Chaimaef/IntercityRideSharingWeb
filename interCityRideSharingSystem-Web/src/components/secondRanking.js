@@ -28,6 +28,7 @@ var AXIOS = axios.create({
           })
           .catch(e => {
             this.errorParticipant = e;
+            console.log(errorMsg)
           });
       }, 
       methods: {
@@ -41,7 +42,7 @@ var AXIOS = axios.create({
             })
             .catch(e => {
               var errorMsg = e.message
-              console.log(errorMsg)
+              //console.log(errorMsg)
               this.errorParticipant = errorMsg
             });
           }
