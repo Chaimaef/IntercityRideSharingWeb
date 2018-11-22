@@ -8,10 +8,10 @@
       </tr>
       <tr>
           <td>
-              <input type="text" placeholder="YYYY-MM-DD">
+              <input type="text" placeholder="dd-MMM-yyyy-HH:mm:ss">
           </td>
           <td>
-              <input type="text" placeholder="YYYY-MM-DD">
+              <input type="text" placeholder="dd-MMM-yyyy-HH:mm:ss">
           </td>
            
            <td>
