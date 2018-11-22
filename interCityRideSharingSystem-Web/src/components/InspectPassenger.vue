@@ -22,7 +22,7 @@
     <p>
       <span id="error" style="color:red">Error Message will be displayed here if errors occured when getting passengers</span>
     </p>
-    <table align="center">
+    <table align="center" >
 
       <thread>
         <tr>

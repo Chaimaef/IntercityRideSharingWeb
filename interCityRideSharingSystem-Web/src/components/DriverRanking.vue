@@ -17,7 +17,8 @@
              <button @click="rankDriversDate(startDate,endDate)">Rank the drivers </button>
           </td>
        </tr>
-     </table>
+ 
+      </table>
  
   <p>
       <span style="color:red"></span>
@@ -38,7 +39,7 @@
 <!-- Input field and button should be kept here -->
 </table>
   </div>
-</template>i
+</template>
 
 <script src="./firstRanking.js">
 </script>
