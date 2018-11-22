@@ -18,6 +18,9 @@
               <button @click="rankDrivers(newParticipant)">Rank the stops </button>
 
           </td>
+            <td>
+              <button onClick="document.location.reload(true)">Clear</button>
+          </td>	
          
       </tr>
     </table>

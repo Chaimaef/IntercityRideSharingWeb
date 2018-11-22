@@ -16,6 +16,9 @@
            <td>
              <button @click="rankDriversDate(startDate,endDate)">Rank the drivers </button>
           </td>
+             <td>
+              <button onClick="document.location.reload(true)">Clear</button>
+          </td>	
        </tr>
  
       </table>

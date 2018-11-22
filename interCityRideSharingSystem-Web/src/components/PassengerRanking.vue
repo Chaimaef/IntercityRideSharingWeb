@@ -18,6 +18,9 @@
             <button @click="rankPassengersDate(startDate, endDate)">Rank the passengers</button>
 
           </td>
+            <td>
+              <button onClick="document.location.reload(true)">Clear</button>
+          </td>	
          
       </tr>
 </table>

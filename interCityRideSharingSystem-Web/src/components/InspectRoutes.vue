@@ -6,6 +6,8 @@
           <td>Name of the stop</td>
           <td>Show All Active Routes</td>
           <td>Show Active Routes with Stop</td>
+          <td>Clear</td>
+          
       </tr>
       <tr>
           <td>
@@ -17,13 +19,16 @@
           <td>
               <button @click="createParticipant(newParticipant)">Show Routes With Stop</button>
           </td>
+           <td>
+             <button onClick="document.location.reload(true)">Clear</button>
+          </td>	
          
       </tr>
     </table>
     <p>
       <span id="error" style="color:red">Error Message will be displayed here if errors occured when getting routes</span>
     </p>
-        <table align="center">
+        <table id="response" align="center">
 
       <thread>
         <tr>

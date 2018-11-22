@@ -6,6 +6,7 @@
           <td>John</td>
           <td>All Active Drivers</td>
           <td>Active Drivers With Name</td>
+          <td>Clear</td>
       </tr>
       <tr>
           <td>
@@ -17,12 +18,15 @@
            <td>
               <button @click="createParticipant(newParticipant)">Show Drivers with Name</button>
           </td>	
+           <td>
+              <button onClick="document.location.reload(true)">Clear</button>
+          </td>	
       </tr>
     </table>
     <p>
       <span id="error" style="color:red"> Error Message will be displayed here if errors occured when getting drivers</span>
     </p>
-    <table align="center">
+    <table id="response" align="center">
 
       <thread>
         <tr>
