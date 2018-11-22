@@ -10,13 +10,13 @@
       </tr>
       <tr>
           <td>
-              <input type="text" v-model="newParticipant" placeholder="Passenger Name">
+              <input type="text" v-model="name" placeholder="Passenger Name">
           </td>
            <td>
-              <button @click="getParticipant">Show All Passengers</button>
+              <button @click="getAllPassenger">Show All Passengers</button>
           </td>	
           <td>
-              <button @click="createParticipant(newParticipant)">Show Passengers With Name</button>
+              <button @click="getPassengerWithName(name)">Show Passengers With Name</button>
           </td>	
              <td>
               <button onClick="document.location.reload(true)">Clear</button>
@@ -33,8 +33,8 @@
         </tr>
       </thread>
         <tbody>
-          <tr v-for="participant in participants">
-            <template v-for="line in participant.split(']')">{{line}}<br></template> 
+          <tr v-for="passenger in passengers">
+            <template v-for="line in passenger.split(']')">{{line}}<br></template> 
           </tr>
         </tbody>
 

@@ -25,9 +25,9 @@ var AXIOS = axios.create({
     name: 'InspectRoutes',
     data () {
         return {
-          participants: [],
-          newParticipant: '',
-          errorParticipant: '',
+          journeys: [],
+          activejourney: '',
+          errorJourney: '',
           response: []
         }
       
@@ -37,45 +37,45 @@ var AXIOS = axios.create({
           AXIOS.get(`/journeysg`)
           .then(response => {
             // JSON responses are automatically parsed.
-            this.participants = response.data
+            this.journeys = response.data
           })
           .catch(e => {
-            this.errorParticipant = e;
+            this.errorJourney = e;
           });
       }, 
       methods: {
-        createParticipant: function (participantName) {
-          if (participantName.indexOf(' ') >= 0){
+        getJourneyWithStop: function (stop) {
+          if (stop.indexOf(' ') >= 0){
             var error = document.getElementById("error");
             error.innerHTML ="Cannot process the request because a whitespace exists"; 
             //console.log("Cannot process the request because a whitespace exists")
           }
-          else {AXIOS.post(`/journeysg/`+participantName, {}, {})
+          else {AXIOS.post(`/journeysg/`+stop, {}, {})
             .then(response => {
               // JSON responses are automatically parsed.
-              this.participants.push(response.data)
-              this.newParticipant = ''
-              this.errorParticipant = ''
+              this.journeys.push(response.data)
+              this.activejourney = ''
+              this.errorJourney = ''
             })
             .catch(e => {
               var errorMsg = e.message
               console.log(errorMsg)
-              this.errorParticipant = errorMsg
+              this.errorJourney = errorMsg
             });
           }
           }, 
-          getParticipant: function () {
+          getAllJourneys: function () {
             AXIOS.post(`/journeysg/`, {}, {})
             .then(response => {
               // JSON responses are automatically parsed.
-              this.participants.push(response.data)
-              this.newParticipant = ''
-              this.errorParticipant = ''
+              this.journeys.push(response.data)
+              this.activejourney = ''
+              this.errorJourney = ''
             })
             .catch(e => {
               var errorMsg = e.message
               console.log(errorMsg)
-              this.errorParticipant = errorMsg
+              this.errorJourney = errorMsg
             });
           }
 

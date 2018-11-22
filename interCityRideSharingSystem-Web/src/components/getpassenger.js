@@ -25,9 +25,9 @@ var AXIOS = axios.create({
     name: 'InspectPassenger',
     data () {
         return {
-          participants: [],
-          newParticipant: '',
-          errorParticipant: '',
+          passengers: [],
+          activePassenger: '',
+          errorPassenger: '',
           response: []
         }
       
@@ -37,44 +37,44 @@ var AXIOS = axios.create({
           AXIOS.get(`/passengerg`)
           .then(response => {
             // JSON responses are automatically parsed.
-            this.participants = response.data
+            this.passengers = response.data
           })
           .catch(e => {
-            this.errorParticipant = e;
+            this.errorPassenger = e;
           });
       }, 
       methods: {
-        createParticipant: function (participantName) {
-          if (participantName.indexOf(' ') >= 0){
+        getPassengerWithName: function (passengerName) {
+          if (passengerName.indexOf(' ') >= 0){
             var error = document.getElementById("error");
             error.innerHTML ="Cannot process the request because a whitespace exists"; 
             //console.log("Cannot process the request because a whitespace exists")
           }
-           else{AXIOS.post(`/passengerg/`+participantName, {}, {})
+           else{AXIOS.post(`/passengerg/`+passengerName, {}, {})
             .then(response => {
               // JSON responses are automatically parsed.
-              this.participants.push(response.data)
-              this.newParticipant = ''
-              this.errorParticipant = ''
+              this.passengers.push(response.data)
+              this.activePassenger = ''
+              this.errorPassenger = ''
             })
             .catch(e => {
               var errorMsg = e.message
               console.log(errorMsg)
-              this.errorParticipant = errorMsg
+              this.errorPassenger = errorMsg
             });}
           }, 
-          getParticipant: function () {
+          getAllPassenger: function () {
             AXIOS.post(`/passengerg/`, {}, {})
             .then(response => {
               // JSON responses are automatically parsed.
-              this.participants.push(response.data)
-              this.newParticipant = ''
-              this.errorParticipant = ''
+              this.passengers.push(response.data)
+              this.activePassenger = ''
+              this.errorPassenger = ''
             })
             .catch(e => {
               var errorMsg = e.message
               console.log(errorMsg)
-              this.errorParticipant = errorMsg
+              this.errorPassenger = errorMsg
             });
           }
 

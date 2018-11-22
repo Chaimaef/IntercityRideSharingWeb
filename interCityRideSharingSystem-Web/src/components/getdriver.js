@@ -8,26 +8,14 @@ var AXIOS = axios.create({
   baseURL: backendUrl,
   headers: { 'Access-Control-Allow-Origin': frontendUrl }
 })
-
-// function ParticipantDto (name) {
-//     this.name = name
-//     this.events = []
-//   }
-  
-//   function EventDto (name, date, start, end) {
-//     this.name = name
-//     this.eventDate = date
-//     this.startTime = start
-//     this.endTime = end
-//   }
   
   export default {
     name: 'InspectDriver',
     data () {
         return {
-          participants: [],
-          newParticipant: '',
-          errorParticipant: '',
+          drivers: [],
+          activeDriver: '',
+          errorDriver: '',
           response: []
         }
       
@@ -37,44 +25,44 @@ var AXIOS = axios.create({
           AXIOS.get(`/driverg`)
           .then(response => {
             // JSON responses are automatically parsed.
-            this.participants = response.data
+            this.drivers = response.data
           })
           .catch(e => {
-            this.errorParticipant = e;
+            this.errorDriver = e;
           });
       }, 
       methods: {
-        createParticipant: function (participantName) {
-          if (participantName.indexOf(' ') >= 0){
+        getDriverWithName: function (driverName) {
+          if (driverName.indexOf(' ') >= 0){
             var error = document.getElementById("error");
             error.innerHTML ="Cannot process the request because a whitespace exists"; 
             //console.log("Cannot process the request because a whitespace exists")
           }
-          else{  AXIOS.post(`/driverg/`+participantName, {}, {})
+          else{  AXIOS.post(`/driverg/`+driverName, {}, {})
             .then(response => {
               // JSON responses are automatically parsed.
-              this.participants.push(response.data)
-              this.newParticipant = ''
-              this.errorParticipant = ''
+              this.drivers.push(response.data)
+              this.activeDriver = ''
+              this.errorDriver = ''
             })
             .catch(e => {
               var errorMsg = e.message
               console.log(errorMsg)
-              this.errorParticipant = errorMsg
+              this.errorDriver = errorMsg
             });}
           }, 
-          getParticipant: function () {
+          getAllDriver: function () {
             AXIOS.post(`/driverg/`, {}, {})
             .then(response => {
               // JSON responses are automatically parsed.
-              this.participants.push(response.data)
-              this.newParticipant = ''
-              this.errorParticipant = ''
+              this.drivers.push(response.data)
+              this.activeDriver = ''
+              this.errorDriver = ''
             })
             .catch(e => {
               var errorMsg = e.message
               console.log(errorMsg)
-              this.errorParticipant = errorMsg
+              this.errorDriver = errorMsg
             });
           }
 

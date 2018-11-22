@@ -10,13 +10,13 @@
       </tr>
       <tr>
           <td>
-              <input type="text" v-model="newParticipant" placeholder="Driver Name">
+              <input type="text" v-model="name" placeholder="Driver Name">
           </td>
            <td>
-              <button @click="getParticipant">Show Drivers</button>
+              <button @click="getAllDriver">Show Drivers</button>
           </td>	
            <td>
-              <button @click="createParticipant(newParticipant)">Show Drivers with Name</button>
+              <button @click="getDriverWithName(name)">Show Drivers with Name</button>
           </td>	
            <td>
               <button onClick="document.location.reload(true)">Clear</button>
@@ -33,8 +33,8 @@
         </tr>
       </thread>
         <tbody>
-          <tr v-for="participant in participants">
-            <template v-for="line in participant.split(']')">{{line}}<br></template> 
+          <tr v-for="driver in drivers">
+            <template v-for="line in driver.split(']')">{{line}}<br></template> 
           </tr>
         </tbody>
 
@@ -43,7 +43,7 @@
   </div>
 </template>
 
-<script src="./getuser.js">
+<script src="./getdriver.js">
 </script>
 
 <style>

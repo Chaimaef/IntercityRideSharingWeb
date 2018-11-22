@@ -11,13 +11,13 @@
       </tr>
       <tr>
           <td>
-              <input type="text" v-model="newParticipant" placeholder="Stop Name">
+              <input type="text" v-model="stops" placeholder="Stop Name">
           </td>
            <td>
-              <button @click="getParticipant">Show All Routes</button>
+              <button @click="getAllJourneys">Show All Routes</button>
           </td>
           <td>
-              <button @click="createParticipant(newParticipant)">Show Routes With Stop</button>
+              <button @click="getJourneyWithStop(stops)">Show Routes With Stop</button>
           </td>
            <td>
              <button onClick="document.location.reload(true)">Clear</button>
@@ -35,8 +35,8 @@
         </tr>
       </thread>
         <tbody>
-          <tr v-for="participant in participants">
-            <template v-for="line in participant.split(']')">{{line}}<br></template> 
+          <tr v-for="journey in journeys">
+            <template v-for="line in journey.split(']')">{{line}}<br></template> 
           </tr>
         </tbody>
 
