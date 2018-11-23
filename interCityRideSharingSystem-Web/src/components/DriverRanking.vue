@@ -24,7 +24,7 @@
       </table>
  
     <p>
-      <span id="error" style="color:red">i</span>
+      <span id="error" style="color:red"></span>
     </p>
 
       <table align="center">
