@@ -44,7 +44,7 @@
   </div>
 </template>
 
-<script src="./firstRanking.js">
+<script src="./rankingDrivers.js">
 </script>
 
 <style>

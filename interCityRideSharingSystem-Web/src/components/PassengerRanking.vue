@@ -46,7 +46,7 @@
   </div>
 </template>
 
-<script src="./secondRanking.js">
+<script src="./rankingPassengers.js">
 </script>
 
 
