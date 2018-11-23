@@ -10,7 +10,7 @@
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
-    "test": "jest"
+    "test": "./node_modules/.bin/jest"
   },
   "dependencies": {
     "@vue/test-utils": "^1.0.0-beta.25",
@@ -22,6 +22,7 @@
     "popper.js": "^1.12.9",
     "save": "^2.3.2",
     "vue": "^2.5.2",
+    "vue-jest": "^3.0.0",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
@@ -90,9 +91,7 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
-},
-{
+  ],
   "jest": {
     "moduleFileExtensions": [
       "js",
