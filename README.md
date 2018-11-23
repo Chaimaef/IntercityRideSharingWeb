@@ -3,8 +3,13 @@
 The intercity Ride Sharing System Web Frontend is for administrator's use to get an overview of the whole system.
 
 ### Heroku Application name and URL 
-* The name of the application on Heroku is t04-web
-* Heroku Git URL is https://git.heroku.com/t04-web.git
+* The name of the web application on Heroku is t04-web
+* Heroku Frontend Git URL is https://git.heroku.com/t04-web.git
+* Heroku Frontend Application Domain URL : https://t04-web.herokuapp.com/
+* The name of the backend application on Heroku is t04-backend
+* Heroku Backend Application Domain URL : http://t04-backend.herokuapp.com
+* Heroku Backend Application URL : http://t04-backend.herokuapp.com
+* Heroku backend Git URL is https://git.heroku.com/t04-backend.git
 
 ### Preliminary steps
 
