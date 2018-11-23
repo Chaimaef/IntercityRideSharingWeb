@@ -33,7 +33,18 @@ var AXIOS = axios.create({
       }, 
       methods: {
         rankStops: function (startDate, endDate) {
-            AXIOS.post(`/rankStops/`+startDate+`/`+endDate, {}, {})
+		 if (startDate.indexOf(' ') >= 0){
+            var error = document.getElementById("error");
+            error.innerHTML ="Cannot process the request because a whitespace exists"; 			  
+            //console.log("Cannot process the request because a whitespace exists")
+          }
+		  if (endDate.indexOf(' ') >= 0){
+            var error = document.getElementById("error");
+            error.innerHTML ="Cannot process the request because a whitespace exists"; 
+            //console.log("Cannot process the request because a whitespace exists")
+          }
+
+		else{AXIOS.post(`/rankStops/`+startDate+`/`+endDate, {}, {})
             .then(response => {
               // JSON responses are automatically parsed.
               this.participants.push(response.data)
@@ -48,6 +59,6 @@ var AXIOS = axios.create({
           }
       }
   }
-
+  }
 
 

@@ -23,9 +23,10 @@
  
       </table>
  
-  <p>
-      <span style="color:red"></span>
+   <p>
+      <span id="error" style="color:red"></span>
     </p>
+
 
       <table align="center">
 

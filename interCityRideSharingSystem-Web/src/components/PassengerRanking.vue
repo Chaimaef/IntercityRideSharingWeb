@@ -40,9 +40,10 @@
 
 <!-- Input field and button should be kept here -->
 </table>
-    <p>
+   <p>
       <span id="error" style="color:red"></span>
     </p>
+
   </div>
 </template>
 
