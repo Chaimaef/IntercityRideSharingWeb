@@ -10,7 +10,7 @@ var AXIOS = axios.create({
 })
   
   export default {
-    name: 'RouteRanking',
+    name: 'PassengerRanking',
     data () {
         return {
           participants: [],
@@ -28,11 +28,12 @@ var AXIOS = axios.create({
           })
           .catch(e => {
             this.errorParticipant = e;
+            console.log(errorMsg)
           });
       }, 
       methods: {
-        rankRoutes: function () {
-            AXIOS.post(`/rankStops`, {}, {})
+        rankStops: function (startDate, endDate) {
+            AXIOS.post(`/rankStops/`+startDate+`/`+endDate, {}, {})
             .then(response => {
               // JSON responses are automatically parsed.
               this.participants.push(response.data)
@@ -41,7 +42,7 @@ var AXIOS = axios.create({
             })
             .catch(e => {
               var errorMsg = e.message
-              console.log(errorMsg)
+              //console.log(errorMsg)
               this.errorParticipant = errorMsg
             });
           }

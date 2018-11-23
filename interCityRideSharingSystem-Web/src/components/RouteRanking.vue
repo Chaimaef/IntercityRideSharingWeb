@@ -1,39 +1,46 @@
 <template>
-  <div id="">
-    <h2>Ranking View -- Most Popular Routes</h2>
+  <div id="RouteRanking">
+    <h2>Ranking View -- Most used routes</h2>
     <table align="center">
-     <tr>
+      <tr>
           <td>Start Date</td>
           <td>End Date</td>
       </tr>
       <tr>
           <td>
-              <input type="text" placeholder="dd-MMM-yyyy-HH:mm:ss">
+              <input type="text" v-model="startDate" placeholder="dd-MMM-yyyy-HH:mm:ss">
           </td>
           <td>
-              <input type="text" placeholder="dd-MMM-yyyy-HH:mm:ss">
-          </td>
-           
+              <input type="text" v-model="endDate" placeholder="dd-MMM-yyyy-HH:mm:ss">
+          </td> 
            <td>
-              <button @click="rankDrivers(newParticipant)">Rank the stops </button>
-
+             <button @click="rankStops(startDate,endDate)">Rank the routes </button>
           </td>
-            <td>
+             <td>
               <button onClick="document.location.reload(true)">Clear</button>
           </td>	
-         
-      </tr>
-    </table>
-    </table>
-    <table align="center">
-  <tr>
-      <td>{{participants}}</td>  
-  </tr>
-   </table>
-
-    <p>
+       </tr>
+ 
+      </table>
+ 
+  <p>
       <span style="color:red"></span>
     </p>
+
+      <table align="center">
+
+      <thread>
+        <tr>
+        </tr>
+      </thread>
+        <tbody>
+          <tr v-for="participant in participants">
+            <template v-for="line in participant.split('|')">{{line}}<br></template> 
+          </tr>
+        </tbody>
+
+<!-- Input field and button should be kept here -->
+</table>
   </div>
 </template>
 
@@ -47,5 +54,6 @@
     background: #f2ece8;
   }
 </style>
+
 
 
