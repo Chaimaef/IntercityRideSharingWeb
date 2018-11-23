@@ -2,6 +2,10 @@
 
 The intercity Ride Sharing System Web Frontend is for administrator's use to get an overview of the whole system.
 
+### Heroku Application name and URL 
+The name of the application on Heroku is t04-web
+Heroku Git URL is https://git.heroku.com/t04-web.git
+
 ### Preliminary steps
 
 In order to run the Web frontend, please make sure that the port 8087 is available on your machine. That is, there is no other processes running on that port. If the port is already allocated, for example, if jenkins is running on 8087, just use the following command to kill it: 
