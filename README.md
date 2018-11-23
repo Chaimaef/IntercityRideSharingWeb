@@ -13,7 +13,7 @@ In order to run the Web frontend, please make sure that the port 8087 is availab
 sudo systemctl stop jenkins 
 ```
 
-## Frontend Services
+## Web Frontend Services
 
 Use git clone command to have a local working copy of the system. Then running the following command to lanuch the system. And it will automatically bring up a web page running on localhost:8087. 
 
