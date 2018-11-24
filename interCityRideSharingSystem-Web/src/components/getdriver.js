@@ -31,12 +31,14 @@ var AXIOS = axios.create({
             this.errorDriver = e;
           });
       }, 
+      //method to get driver with the same input name in the name field  from the database
+      //using the controller from the backend
+      //also has the function to get list of all the drivers
       methods: {
         getDriverWithName: function (driverName) {
           if (driverName.indexOf(' ') >= 0){
             var error = document.getElementById("error");
             error.innerHTML ="Cannot process the request because a whitespace exists"; 
-            //console.log("Cannot process the request because a whitespace exists")
           }
           else{  AXIOS.post(`/driverg/`+driverName, {}, {})
             .then(response => {

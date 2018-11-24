@@ -6,6 +6,7 @@
           <td>Start Date</td>
           <td>End Date</td>
       </tr>
+            <!-- setting up the input text fields -->
       <tr>
           <td>
               <input type="text" v-model="startDate" placeholder="dd-MMM-yyyy-HH:mm:ss">
@@ -25,7 +26,7 @@
       </tr>
 </table>
 
- 
+   <!-- table generating the list of passengers in descending order  -->
       <table align="center">
 
       <thread>

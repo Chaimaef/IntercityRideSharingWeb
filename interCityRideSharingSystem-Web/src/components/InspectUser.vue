@@ -2,6 +2,7 @@
   <div id="InspectUser">
     <h2>Fleet Status View</h2>
     <table align="center">
+    <!-- setting up the input text fields -->
       <tr>
           <td>Active Drivers</td>
           <td>Active Passengers</td>

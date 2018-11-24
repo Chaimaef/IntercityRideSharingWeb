@@ -2,6 +2,7 @@
   <div id="InspectDriver">
     <h2>Fleet Status View -- Driver</h2>
     <table align="center">
+    <!-- setting up the input text fields -->
       <tr>
           <td>John</td>
           <td>All Active Drivers</td>
@@ -26,6 +27,7 @@
     <p>
       <span id="error" style="color:red"> Error Message will be displayed here if errors occured when getting drivers</span>
     </p>
+    <!-- tables generating the list of drivers with the same name provided in the text field -->
     <table id="response" align="center">
 
       <thread>

@@ -31,6 +31,8 @@ var AXIOS = axios.create({
             this.errorParticipant = e;
           });
       }, 
+      //method to get drivers in between the input start and end date in the name fields
+      //  from the database using the controller from the backend in descending order of ranks
       methods: {
         rankDriversDate: function (startDate, endDate) {
 		  if (startDate.indexOf(' ') >= 0){

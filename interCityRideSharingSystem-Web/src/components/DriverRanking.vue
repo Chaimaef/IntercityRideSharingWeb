@@ -6,6 +6,9 @@
           <td>Start Date</td>
           <td>End Date</td>
       </tr>
+
+      <!-- setting up the input text fields -->
+
       <tr>
           <td>
               <input type="text" v-model="startDate" placeholder="dd-MMM-yyyy-HH:mm:ss">
@@ -27,6 +30,7 @@
       <span id="error" style="color:red"></span>
     </p>
 
+      <!-- table generating the list of drivers in descending order  -->
       <table align="center">
 
       <thread>

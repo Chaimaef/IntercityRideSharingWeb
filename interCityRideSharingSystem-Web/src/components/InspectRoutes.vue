@@ -2,6 +2,7 @@
   <div id="InspectRoutes">
     <h2>Fleet Status View -- Routes </h2>
     <table align="center">
+    <!-- setting up the input text fields -->
       <tr>
           <td>Name of the stop</td>
           <td>Show All Active Routes</td>
@@ -28,6 +29,7 @@
     <p>
       <span id="error" style="color:red">Error Message will be displayed here if errors occured when getting routes</span>
     </p>
+        <!-- tables generating the list of drivers with the same name provided in the text field -->
         <table id="response" align="center">
 
       <thread>

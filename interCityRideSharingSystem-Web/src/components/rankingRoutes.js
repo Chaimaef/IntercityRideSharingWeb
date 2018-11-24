@@ -31,6 +31,8 @@ var AXIOS = axios.create({
             console.log(errorMsg)
           });
       }, 
+      //method to get journeys in between the input start and end date in the name fields
+      //  from the database using the controller from the backend in descending order of ranks
       methods: {
         rankStops: function (startDate, endDate) {
 		 if (startDate.indexOf(' ') >= 0){

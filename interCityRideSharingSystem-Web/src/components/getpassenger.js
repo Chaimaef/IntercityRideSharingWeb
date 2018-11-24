@@ -8,18 +8,6 @@ var AXIOS = axios.create({
   baseURL: backendUrl,
   headers: { 'Access-Control-Allow-Origin': frontendUrl }
 })
-
-// function ParticipantDto (name) {
-//     this.name = name
-//     this.events = []
-//   }
-  
-//   function EventDto (name, date, start, end) {
-//     this.name = name
-//     this.eventDate = date
-//     this.startTime = start
-//     this.endTime = end
-//   }
   
   export default {
     name: 'InspectPassenger',
@@ -43,6 +31,9 @@ var AXIOS = axios.create({
             this.errorPassenger = e;
           });
       }, 
+      //method to get passenger with the same input name in the name field  from the database
+      //using the controller from the backend
+      //also has the function to get list of all the passengers in the database
       methods: {
         getPassengerWithName: function (passengerName) {
           if (passengerName.indexOf(' ') >= 0){

@@ -43,6 +43,9 @@ var AXIOS = axios.create({
             this.errorJourney = e;
           });
       }, 
+      //method to get journey with the same input stop in the name field  from the database
+      //using the controller from the backend
+      //also has the function to get list of all the journeys
       methods: {
         getJourneyWithStop: function (stop) {
           if (stop.indexOf(' ') >= 0){
